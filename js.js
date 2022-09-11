@@ -53,7 +53,7 @@ var app = (() => {
         },
         removeStorage(index) {
             localStorage.removeItem(courses[index])
-            localStorage.setItem(storagekey, courses)
+            localStorage.setItem(storagekey, JSON.stringify(courses))
         },
         handleEvent(e) {
             var deleteBtn = e.target.closest('.delete')
